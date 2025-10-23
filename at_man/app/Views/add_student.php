@@ -6,6 +6,20 @@
     <title>Add Student</title>
     <style>label{display:block;margin-top:8px;} table{border-collapse:collapse;} td,th{border:1px solid #ccc;padding:6px;}</style>
     </head>
+    <style>
+        body{
+            display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            width: 100%;
+        }
+        body form{
+            display: flex;
+                justify-content: space-evenly;
+                gap: 100px;
+        }
+    </style>
 <body>
     <h1>Add Student</h1>
     <?php if(session()->getFlashdata('message')): ?>
