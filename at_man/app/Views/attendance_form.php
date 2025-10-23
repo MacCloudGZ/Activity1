@@ -45,7 +45,7 @@
             <button type="submit">Load</button>
         </forms>
         <a href="students">Add Students</a>
-        <a href="attendance-form">view Attendance Form</a>
+        <a href="attendance-report">View Reports</a>
     </aside>
 
     <section>

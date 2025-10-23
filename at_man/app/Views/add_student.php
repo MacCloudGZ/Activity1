@@ -48,7 +48,7 @@
             <label>Course <input type="text" name="course" required></label>
             <button type="submit">Add Student</button>
         </form>
-        <a href="attendance-form">view Attendance Form</a>
+        <a href="attendance-form">Manage Attendance</a>
         <a href="attendance-report">View Reports</a>
     </aside>
     <section>
