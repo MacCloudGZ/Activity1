@@ -30,7 +30,7 @@ class Database extends Config
         'hostname'     => '127.0.0.1',
         'username'     => 'root',
         'password'     => 'root',
-        'database'     => 'attendance_db_zabala',
+        'database'     => 'ci4_login_zabala',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
