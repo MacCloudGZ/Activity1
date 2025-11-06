@@ -6,26 +6,9 @@ use App\Models\UserModel;
 
 class AuthController extends BaseController
 {
+    // Helpers are loaded in BaseController now.
     public function index()
     {
-        if ($this->request->getMethod() === 'post') {
-            $model = new UserModel();
-            $username = $this->request->getPost('username');
-            $password = $this->request->getPost('password');
-
-            if ($user = $model->attemptLogin($username, $password)) {
-                $session = session();
-                $session->set([
-                    'user_id' => $user['id'],
-                    'username' => $user['username'],
-                    'isLoggedIn' => true
-                ]);
-
-                return redirect()->to('/dashboard');
-            }
-
-            return redirect()->back()->with('error', 'Invalid login credentials');
-        }
         return view('login');
     }
 
@@ -39,6 +22,7 @@ class AuthController extends BaseController
         helper(['form']);
         $rules = [
             'username' => 'required|min_length[4]|max_length[100]|is_unique[users.username]',
+            'email' => 'required|valid_email|is_unique[users.email]',
             'password' => 'required|min_length[4]|max_length[50]',
             'confirmpassword' => 'matches[password]'
         ];
@@ -47,10 +31,11 @@ class AuthController extends BaseController
             $model = new UserModel();
             $data = [
                 'username' => $this->request->getVar('username'),
+                'email' => $this->request->getVar('email'),
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
             ];
             $model->save($data);
-            return redirect()->to('/login');
+            return redirect()->to('/');
         } else {
             $data['validation'] = $this->validator;
             return view('register', $data);
@@ -79,11 +64,11 @@ class AuthController extends BaseController
                 $session->set($ses_data);
                 return redirect()->to('/dashboard');
             } else {
-                $session->setFlashdata('msg', 'Password is incorrect.');
+                $session->setFlashdata('msg', 'Invalid credentials.');
                 return redirect()->to('/');
             }
         } else {
-            $session->setFlashdata('msg', 'Username does not exist.');
+            $session->setFlashdata('msg', 'Invalid credentials.');
             return redirect()->to('/');
         }
     }

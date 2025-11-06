@@ -29,7 +29,7 @@ class Database extends Config
         // Use 127.0.0.1 to force TCP (avoids unix socket issues on macOS/MAMP)
         'hostname'     => '127.0.0.1',
         'username'     => 'root',
-        'password'     => 'root',
+    'password'     => '',
         'database'     => 'ci4_login_zabala',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
