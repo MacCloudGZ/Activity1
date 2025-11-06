@@ -4,35 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Report</title>
+    <link rel="stylesheet" href="<?= base_url('student.css')?>">
     <style>table{border-collapse:collapse;} td,th{border:1px solid #ccc;padding:6px;}</style>
 </head>
-    <style>
-        body{
-            padding: 0;
-            margin: 0;
-            display: flex;
-            height: 100vh;
-        }
-        body aside{
-        padding: 20px;
-            width: 300px;
-            background-color: #c33333ff;
-            color: white;
-            display: flex;
-                flex-direction: column;
-                gap: 20px;
-        }
-        body aside form{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        body section{
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-        }
-    </style>
 <body>
     <aside>
         <h1>Attendance Report</h1>

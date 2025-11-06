@@ -1,0 +1,25 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+body aside{
+padding: 20px;
+    width: 300px;
+    background-color: #c33333ff;
+    color: white;
+    display: flex;
+        flex-direction: column;
+        gap: 20px;
+}
+body aside form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+body section{
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
