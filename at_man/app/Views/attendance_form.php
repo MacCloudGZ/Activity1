@@ -18,8 +18,7 @@
             <label>Select date: <input type="date" name="date" value="<?= esc($date) ?>"></label>
             <button type="submit">Load</button>
         </forms>
-        <a href="students">Add Students</a>
-        <a href="attendance-report">View Reports</a>
+        <a href="dashboard">Back to Dashboard</a>
     </aside>
 
     <section>
@@ -65,7 +64,6 @@
                     <?php endif; ?>
                 </tbody>
             </table>
-        
             <button type="submit">Save Attendance for <?= esc($date) ?></button>
         </form>
     </section>

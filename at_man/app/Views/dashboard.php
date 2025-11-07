@@ -2,40 +2,21 @@
 <html>
 <head>
     <title>Dashboard</title>
-    <style>
-        .container { max-width: 800px; margin: 50px auto; padding: 20px; }
-        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
-        .nav { margin: 20px 0; }
-        .nav a { 
-            display: inline-block;
-            padding: 10px 20px;
-            margin-right: 10px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-        .logout { 
-            padding: 10px 20px;
-            background: #dc3545;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-    </style>
+    <link rel="stylesheet" href="<?= base_url('dashboard.css')?>">
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <header>
             <h2>Welcome, <?= session()->get('username') ?>!</h2>
-            <a href="/logout" class="logout">Logout</a>
-        </div>
+            <a href="logout" class="logout">Logout</a>
+        </header>
 
-        <div class="nav">
+        <nav>
+            <p>Your email: <?= session()->get('email') ?></p>   
             <a href="/students">Manage Students</a>
             <a href="/attendance-form">Take Attendance</a>
             <a href="/attendance-report">View Reports</a>
-        </div>
+        </nav>
 
         <div class="content">
             <h3>Quick Actions</h3>

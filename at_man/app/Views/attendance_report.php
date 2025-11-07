@@ -15,8 +15,7 @@
         <label>Select date: <input type="date" name="date" value="<?= esc($date) ?>"></label>
             <button type="submit">View</button>
     </form>
-        <a href="students">Add Students</a>
-        <a href="attendance-form">Manage Attendance</a>
+        <a href="dashboard">Back to Dashboard</a>
     </aside>
 
     <section>

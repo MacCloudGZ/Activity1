@@ -2,14 +2,7 @@
 <html>
 <head>
     <title>Login</title>
-    <style>
-        .container { max-width: 400px; margin: 50px auto; padding: 20px; }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; }
-        input { width: 100%; padding: 8px; margin-bottom: 10px; }
-        button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; }
-        .error { color: red; margin-bottom: 15px; }
-    </style>
+    <link rel="stylesheet" href="<?= base_url('login.css')?>">
 </head>
 <body>
     <div class="container">
