@@ -36,10 +36,12 @@ class Usertable extends Migration
                 'null' => true,
             ],
         ]);
+        $this->forge->addKey('id', true);
+        $this->forge->createTable('users');
     }
 
     public function down()
     {
-        //
+        $this->forge->dropTable('users');
     }
 }
