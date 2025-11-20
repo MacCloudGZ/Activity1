@@ -26,11 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        // Use 127.0.0.1 to force TCP (avoids unix socket issues on macOS/MAMP)
-        'hostname'     => '127.0.0.1',
-        'username'     => 'root',
-        'password'     => 'root',
-        'database'     => 'attendance_db_zabala',
+        'hostname'     => 'localhost',
+        'username'     => '',
+        'password'     => '',
+        'database'     => '',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -42,7 +41,6 @@ class Database extends Config
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        // MAMP commonly uses 8889 for MySQL; change if your MySQL uses a different port
         'port'         => 3306,
         'numberNative' => false,
         'foundRows'    => false,

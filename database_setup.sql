@@ -1,6 +1,6 @@
-CREATE database attendance_db_zabala;
+CREATE database db_zabala;
 
-use attendance_db_zabala;
+use db_zabala;
 
 create table students( 
 	student_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
